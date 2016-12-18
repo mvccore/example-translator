@@ -1,2 +1,2 @@
 # example-translator
-MVC application with more routes and ajax requests to translate english into piglatin.
+MVC application with reqrited routes and ajax requests to translate english into piglatin.
