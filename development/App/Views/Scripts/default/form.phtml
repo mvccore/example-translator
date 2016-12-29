@@ -1,0 +1,24 @@
+<form id="pig-latin-translator" action="<?php
+	echo $this->Url('Translator::HtmlSubmit');
+?>" data-js="<?php
+	echo $this->JsonAttr(array(
+		'jsSubmit'	=> $this->Url('Translator::JsSubmit')
+	));
+?>" method="post" enctype="application/x-www-form-urlencoded">
+
+	<fieldset class="plt-original-text">
+		<label for="plt-original-text">Type english text:</label>
+		<textarea rows="4" cols="100" name="original-text" id="plt-original-text"><?php echo $this->OriginalText; ?></textarea>
+	</fieldset>
+	
+	<fieldset class="plt-translated-text">
+		<label for="plt-translated-text">Pig Latin result:</label>
+		<textarea rows="4" cols="100" id="plt-translated-text"><?php echo $this->TranslatedText; ?></textarea>
+	</fieldset>
+
+	<div class="clear"></div>
+	
+	<button class="button-green" type="submit"><span><b>Translate</b></span></button>
+	
+</form>
+	

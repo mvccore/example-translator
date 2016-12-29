@@ -1,0 +1,20 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Pig Latin Translator</title>
+		<meta name="author" content="Tom Flídr <tomflidr(at)gmail(dot)com>" />
+		<link rel="shortcut icon" href="<?php echo $this->Url('Assets::img', array('path'=>'/static/img/favicon.ico')); ?>" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<?php echo $this->Css('fixedHead')->Render(); ?>
+		<?php echo $this->Js('fixedHead')->Render(); ?>
+	</head>
+	<body>
+		<!--[if lt IE 9]><div class="filters"><![endif]-->
+		<!--[if (gt IE 8)|!(IE)]><!--><div class="no-filters"><!--<![endif]-->
+			<?php echo $this->GetContent(); ?>
+		</div>
+	</body>
+	<?php echo $this->Js('varFoot')->Render(); ?>
+</html>
