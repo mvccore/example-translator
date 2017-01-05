@@ -2,7 +2,7 @@
 	"name": "mvccore/example-translator",
 	"type": "application",
 	"description": "MvcCore Example - Pig Latin Translator - translate English to Pig Latin - https://en.wikipedia.org/wiki/Pig_Latin.",
-	"keywords": ["mvccore", "framework", "mvc", "core", "model", "html5", "simple mvc", "super fast mvc", "easy mvc"],
+	"keywords": ["mvccore", "framework", "mvc", "simple mvc", "super fast mvc", "easy mvc", "single file application", "pig latin translator"],
 	"license": ["BSD-3-Clause"],
 	"authors": [
 		{
