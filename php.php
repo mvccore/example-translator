@@ -1,45 +1,15 @@
 <?php
 
-include_once("/../../libraries/packager/src/Packager/Php.php");
+	include_once("/../../libraries/packager/src/Packager/Php.php");
 
-$config = array(
-	'sourcesDir'	=> __DIR__ . '/development',
-	'releaseFile'	=> __DIR__ . '/release/index.php',
-	'includeFirst'	=> array(
-		/*	
-		'/Libs/Nette/Debug/IDebugPanel.php',
-		'/Libs/Nette/Debug/DebugPanel.php',
-		'/Libs/Nette/Debug/Debug.php',
-		*/
-		'/Libs/Zend/Loader.php',
-		'/Libs/Zend/Db/Exception',
-		'/Libs/Zend/Db/Adapter/Exception',
-		'/Libs/Zend/Db/Statement/Exception',
-		'/Libs/Zend/Db/Table/Row/Abstract',
-		'/Libs/Zend/Db/Table/Rowset/Abstract',
-		'/Libs/',
-		'/App/MvcCore.php',
-		'/App/Controllers/Base.php',
-		'/App/',
-	),
-	'excludePatterns'		=> array(
-		"^/\.hg",
-		"^/Libs/startup.php$",
-		"^/Libs/Nette",
-		"^/Var/Logs/(.*)$",
-		"^/\.htaccess",
-		"^/\.hgignore",
-		"^/web.config",
-		"_references.js",
-		".bak$",
-	),
-	'patternReplacements'	=> array(
-		"#([^a-zA-Z0-9_])\@include_once\(([^;]*);#" => '$1',
-	),
-	'stringReplacements'	=> array(
-		'@Nette_DebugAdapter::Init(TRUE);' => '',
-	),
-	'compressPhp'			=> 1,
-);
-
-Packager_Php::run($config);
+	include_once('./config.php');
+	
+	Packager_Php::Create($config)
+		->SetPhpFileSystemMode(Packager_Php::FS_MODE_STRICT_PACKAGE)
+		->KeepPhpFunctions(
+			//'require',
+			//'include',
+			//'DirectoryIterator',
+			//'parse_ini_file'
+		)
+		->Run();

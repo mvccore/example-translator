@@ -1,17 +1,17 @@
 
-/* /Var/Tmp/rendered_css_9bb70e5aa46105d9a485a4237253bd47_static_css_fonts.css */
-@font-face{font-family:'MyriadRegular';src:url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-regular-webfont.eot');src:url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-regular-webfont.woff') format('woff'),
-url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-regular-webfont.ttf') format('truetype'),
-url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-regular-webfont.svg#MyriadRegular') format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'MyriadSemiBold';src:url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-semibold-webfont.eot');src:url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-semibold-webfont.woff') format('woff'),
-url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-semibold-webfont.ttf') format('truetype'),
-url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-semibold-webfont.svg#MyriadSemiBold') format('svg');font-weight:bold;font-style:normal}@font-face{font-family:'MyriadBold';src:url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-bold-webfont.eot');src:url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
-url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-bold-webfont.woff') format('woff'),
-url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-bold-webfont.ttf') format('truetype'),
-url('index.php?controller=assets&action=img&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-bold-webfont.svg#MyriadBold') format('svg');font-weight:bold;font-style:normal}
+/* /static/css/fonts.css */
+@font-face{font-family:'MyriadRegular';src:url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-regular-webfont.eot');src:url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-regular-webfont.woff') format('woff'),
+url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-regular-webfont.ttf') format('truetype'),
+url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-regular-webfont.svg#MyriadRegular') format('svg');font-weight:normal;font-style:normal}@font-face{font-family:'MyriadSemiBold';src:url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-semibold-webfont.eot');src:url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-semibold-webfont.woff') format('woff'),
+url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-semibold-webfont.ttf') format('truetype'),
+url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-semibold-webfont.svg#MyriadSemiBold') format('svg');font-weight:bold;font-style:normal}@font-face{font-family:'MyriadBold';src:url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-bold-webfont.eot');src:url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-bold-webfont.woff') format('woff'),
+url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-bold-webfont.ttf') format('truetype'),
+url('index.php?controller=controller&action=asset&path=%2Fstatic%2Ffonts%2Fmyriadwebpro%2Fmyriadwebpro-bold-webfont.svg#MyriadBold') format('svg');font-weight:bold;font-style:normal}
 
-/* /Var/Tmp/rendered_css_9bb70e5aa46105d9a485a4237253bd47_static_css_all.css */
+/* /static/css/all.css */
 html,body{margin:0;font-family:'MyriadRegular',Arial,Helvetica,sans-serif;line-height:1.5em;font-size:14px;background:#999}.clear{clear:both}.master-container{background:#fff;width:998px;padding:1px;margin:50px
 auto;border-radius:3px;box-shadow:0 0 15px rgba(0,0,0,0.6)}.master-container
 h1{margin:25px}#pig-latin-translator{margin:25px}#pig-latin-translator
@@ -22,7 +22,7 @@ textarea{display:block;width:460px;height:100px;border:1px
 solid #ccc}#pig-latin-translator
 button{margin-top:15px}
 
-/* /Var/Tmp/rendered_css_9bb70e5aa46105d9a485a4237253bd47_static_css_button.css */
+/* /static/css/button.css */
 button,
 button span,
 button span b,
@@ -33,7 +33,7 @@ b{display:block;text-decoration:none;height:31px;border:0;padding-top:0;padding-
 button span,
 .button,
 .button
-span{line-height:31px;background-color:transparent;background-image:url('index.php?controller=assets&action=img&path=%2Fstatic%2Fimg%2Fbuttons.png')}button,.button{margin:0;padding-left:15px;padding-right:0;background-position:0 0}button{#padding:0}button span,
+span{line-height:31px;background-color:transparent;background-image:url('index.php?controller=controller&action=asset&path=%2Fstatic%2Fimg%2Fbuttons.png')}button,.button{margin:0;padding-left:15px;padding-right:0;background-position:0 0}button{#padding:0}button span,
 .button
 span{padding-right:15px;padding-left:0;background-position:100% -62px}@-moz-document url-prefix(){button
 span{position:relative;top:-1px}}button span b,
