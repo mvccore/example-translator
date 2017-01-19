@@ -1,7 +1,7 @@
 html,body{margin:0;font-family:'MyriadRegular',Arial,Helvetica,sans-serif;line-height:1.5em;font-size:14px;background:#999;}
 .clear{clear:both;}
 .master-container{background:#fff;width:998px;padding:1px;margin:50px auto;border-radius:3px;box-shadow:0 0 15px rgba(0,0,0,0.6);}
-.master-container h1{margin:25px;}
+.master-container h1{margin:25px;font-family:'MyriadBold';font-size:36px;}
 #pig-latin-translator{margin:25px;}
 #pig-latin-translator fieldset{display:block;border:0;padding:0;}
 .plt-original-text{float:left;}

@@ -49,10 +49,9 @@ Class.Define('Front', {
 			},
 			success: function (data, statusCode, xhr) {
 				if (data.success) {
-					var texts = data.data;
-					var originalText = texts[0];
-					var translatedText = texts[1];
-					this.pigLatinForm.translText.value = translatedText;
+					this.pigLatinForm.translText.value = data.translatedText;
+				} else {
+					this.pigLatinForm.translText.value = data.message;
 				}
 				this.pigLatinForm.semaphore = false;
 			}.bind(this),

@@ -13,7 +13,9 @@
 	<body>
 		<!--[if lt IE 9]><div class="filters"><![endif]-->
 		<!--[if (gt IE 8)|!(IE)]><!--><div class="no-filters"><!--<![endif]-->
-			<?php echo $this->GetContent(); ?>
+			<div class="master-container">
+				<?php echo $this->GetContent(); ?>
+			</div>
 		</div>
 	</body>
 	<?php echo $this->Js('varFoot')->Render(); ?>
