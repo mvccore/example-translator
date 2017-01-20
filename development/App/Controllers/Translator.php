@@ -31,7 +31,7 @@ class App_Controllers_Translator extends App_Controllers_Base
 
 	public function HtmlSubmitAction () {
 		$this->_validateInputAndTryToTranslate();
-		self::Redirect($this->Url('default'));
+		self::Redirect('/');
 	}
 	
 	public function JsSubmitAction () {

@@ -5,5 +5,5 @@
 	$app = MvcCore::GetInstance();
 
 	App_Bootstrap::Init();
-
+	
 	$app->Run();

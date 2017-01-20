@@ -1,5 +1,12 @@
 <?php
 
+// If you want to use this config, you need to copy manualy everything 'from' => 'to':
+// - '/development/static/fonts'		=> '/release/static/fonts'
+// - '/development/static/img'			=> '/release/static/img'
+// - '/development/Var/Tmp'				=> '/release/Var/Tmp'
+// - '/development/App/Views/Layouts'	=> '/release//App/Views/Layouts'
+// - '/development/App/Views/Scripts'	=> '/release//App/Views/Scripts'
+
 $config = array(
 	'sourcesDir'				=> __DIR__ . '/../development',
 	'releaseFile'				=> __DIR__ . '/../release/index.php',
@@ -24,10 +31,6 @@ $config = array(
 		"^/vendor/mrclay/.*",							// HTML/JS/CSS minify library
 
 		// Exclude everything from '/static/...' and '/Var/Tmp' directory:
-		// If you want to use this config, you need to copy manualy everything 'from' => 'to':
-		// - '/development/static/fonts'	=> '/release/static/fonts'
-		// - '/development/static/img'		=> '/release/static/img'
-		// - '/development/Var/Tmp'			=> '/release/Var/Tmp'
 		"^/static/.*",
 		"^/Var/Tmp/.*",
 		"^/App/Views/Layouts/.*",
