@@ -12,6 +12,7 @@ button span b,
 	padding-bottom:0;
 	cursor:pointer;
 	text-decoration:none !important;
+	white-space:nowrap;
 }
 button,
 button span,

@@ -1,8 +1,8 @@
 <form id="pig-latin-translator" action="<?php
-	echo $this->Url('Translator::HtmlSubmit');
+	echo $this->Url('Translator:HtmlSubmit');
 ?>" data-js="<?php
 	echo $this->JsonAttr(array(
-		'jsSubmit'	=> $this->Url('Translator::JsSubmit')
+		'jsSubmit'	=> $this->Url('Translator:JsSubmit')
 	));
 ?>" method="post" enctype="application/x-www-form-urlencoded">
 

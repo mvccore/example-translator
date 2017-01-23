@@ -49,7 +49,7 @@ class App_Controllers_Translator extends App_Controllers_Base
 			'translatedText'=> '',
 			'message'		=> '',
 		);
-
+		
 		$originalText = $this->GetParam('original-text', ".*");
 		$originalText = trim(strip_tags($originalText));
 

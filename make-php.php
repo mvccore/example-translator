@@ -12,21 +12,21 @@
 	// to pack PHP scripts and templates but without any static files,
 	// use this config bellow and:
 	//		set: ...->SetPhpFileSystemMode(Packager_Php::FS_MODE_PRESERVE_PACKAGE)
-	//		and follow copiing instructions inside config:
+	//		and follow copying instructions inside config:
 	//include_once('.packager/config-php-with-composer-preserve-package.php');
 
 
 	// to pack PHP scripts and templates but without any static files,
 	// use this config bellow and:
 	//		set: ...->SetPhpFileSystemMode(Packager_Php::FS_MODE_PRESERVE_HDD)
-	//		and follow copiing instructions inside config:
+	//		and follow copying instructions inside config:
 	//include_once('.packager/config-php-with-composer-preserve-hdd.php');
 
 
 	// to pack only PHP scripts without any static files and any templates,
 	// use this config bellow and
 	//		set: ...->SetPhpFileSystemMode(Packager_Php::FS_MODE_STRICT_HDD)
-	//		and follow copiing instructions inside config:
+	//		and follow copying instructions inside config:
 	//include_once('.packager/config-php-with-composer-strict-hdd.php');
 
 
