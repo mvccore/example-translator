@@ -1,6 +1,8 @@
 <?php
 
-class App_Controllers_Translator extends App_Controllers_Base
+namespace App\Controllers;
+
+class Translator extends Base
 {
 	const DEFAULT_ORIGINAL_TEXT = "";
 	const DEFAULT_TRANSLATED_TEXT = "";
@@ -31,7 +33,7 @@ class App_Controllers_Translator extends App_Controllers_Base
 
 	public function HtmlSubmitAction () {
 		$this->_validateInputAndTryToTranslate();
-		self::Redirect('/');
+		self::Redirect($this->request->BasePath . '/');
 	}
 	
 	public function JsSubmitAction () {
@@ -90,13 +92,25 @@ class App_Controllers_Translator extends App_Controllers_Base
 			// check the rules and translate
 			if ($this->_translatorCheckStartWithVowel($word)) {
 				//x(1);
-				$result .= preg_replace($this->_translatorRules->vowel, "$1$2'" . self::$_translatorCfg->vowelEndings[1], $word);
+				$result .= preg_replace(
+					$this->_translatorRules->vowel, 
+					"$1$2'" . self::$_translatorCfg->vowelEndings[1], 
+					$word
+				);
 			} elseif ($this->_translatorCheckStartWithConsonant($word)) {
 				//x(2);
-				$result .= preg_replace($this->_translatorRules->consonant, "$2-$1ay", $word);
+				$result .= preg_replace(
+					$this->_translatorRules->consonant, 
+					"$2-$1ay", 
+					$word
+				);
 			} elseif ($this->_translatorCheckStartWithOther($word)) {
 				//x(3);
-				$result .= preg_replace($this->_translatorRules->other, "$2-$1ay", $word);
+				$result .= preg_replace(
+					$this->_translatorRules->other, 
+					"$2-$1ay", 
+					$word
+				);
 			}
 			// space after each word
 			$result .= " ";

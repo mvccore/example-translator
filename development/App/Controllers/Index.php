@@ -1,8 +1,10 @@
 <?php
 
-class App_Controllers_Default extends App_Controllers_Base
+namespace App\Controllers;
+
+class Index extends Base
 {
-	public function DefaultAction () {
+	public function IndexAction () {
 		$sessionTexts = $this->getSessionTexts();
 		$this->view->OriginalText = $sessionTexts->original;
 		$this->view->TranslatedText = $sessionTexts->translated;

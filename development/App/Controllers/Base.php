@@ -1,12 +1,14 @@
 <?php
 
-class App_Controllers_Base extends MvcCore_Controller
+namespace App\Controllers;
+
+class Base extends \MvcCore\Controller
 {
 	private static $_session = NULL;
 	public function PreDispatch () {
 		parent::PreDispatch();
 		if (!$this->ajax) {
-			MvcCoreExt_ViewHelpers_Assets::SetGlobalOptions(array(
+			\MvcCore\Ext\View\Helpers\Assets::SetGlobalOptions(array(
 				'cssMinify'	=> 1,
 				'cssJoin'	=> 1,
 				'jsMinify'	=> 1,
@@ -28,7 +30,7 @@ class App_Controllers_Base extends MvcCore_Controller
 	}
 	protected function & getSessionTexts () {
 		if (is_null(self::$_session)) {
-			self::$_session = MvcCore_Session::GetNamespace('texts');
+			self::$_session = \MvcCore\Session::GetNamespace('texts');
 			self::$_session->SetExpirationSeconds(3600); // hour
 		}
 		return self::$_session;
