@@ -10,7 +10,8 @@ var Helpers = {
 			try{
 				result = {
 					success: true,
-					data: eval('(function(){return ('+val+');})();')
+					//data: eval('(function(){return ('+val+');})();')
+					data: JSON.parse(val)
 				}
 			}catch(e){
 				result = failResult;
@@ -26,7 +27,19 @@ var Helpers = {
 		return result;
 	},
 	// get live javascript code from json_attr template helper
-	getJsonAttr: function(encodedValue){
-		return Helpers.getEvaluated(decodeURIComponent(encodedValue).replace(/%25/g, '%'));
+	getJsonAttr: function (encodedValue) {
+		/*var decodeURIComponent(encodedValue)
+			.replace(/%(?=[\da-fA-F]{2})/gi, function () {
+				// PHP tolerates poorly formed escape sequences
+				return '%25'
+			})*/
+		
+		return Helpers.getEvaluated(
+			decodeURIComponent(encodedValue)
+				.replace(/%(?=[\da-f]{2})/gi, function () {
+					// PHP tolerates poorly formed escape sequences
+					return '%25'
+				})
+		);
 	}
 }

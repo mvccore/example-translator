@@ -22,7 +22,7 @@ Class.Define('Front', {
 		
 		var dataAttr = form.getAttribute('data-js');
 		var dataAttrRes = Helpers.getJsonAttr(dataAttr);
-		this.pigLatinForm.action = (dataAttrRes.success) ? dataAttrRes.data.jsSubmit : form.getAttribute('action');
+		this.pigLatinForm.action = (dataAttrRes.success) ? dataAttrRes.data.jsSubmit.replace(/\&amp;/gi, '&') : form.getAttribute('action');
 		
 		this.pigLatinForm.origText = document.getElementById(this.self.PIGLATIN_FORM_ORIG_TEXT_ID);
 		this.pigLatinForm.translText = document.getElementById(this.self.PIGLATIN_FORM_TRANSL_TEXT_ID);

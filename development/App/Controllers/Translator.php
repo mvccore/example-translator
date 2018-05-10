@@ -17,12 +17,12 @@ class Translator extends Base
 	private $_consonant = '';
     private $_vowel = '';
     private $_other = '';
-	
+
 	public function Init () {
 		parent::Init();
-		
+
 		self::$_translatorCfg = (object) self::$_translatorCfg;
-		
+
 		// store a set of rules, as we create them from the config
 		$this->_translatorRules = (object) array(
 			'consonant'	=> '/^([^' . self::$_translatorCfg->vowels . self::$_translatorCfg->additional . ']*)(.*)/',
@@ -33,13 +33,13 @@ class Translator extends Base
 
 	public function HtmlSubmitAction () {
 		$this->_validateInputAndTryToTranslate();
-		self::Redirect($this->request->BasePath . '/');
+		self::Redirect($this->request->GetBasePath() . '/');
 	}
-	
+
 	public function JsSubmitAction () {
 		$this->JsonResponse($this->_validateInputAndTryToTranslate());
 	}
-	
+
 	/**
 	 * Validate user input and try to translate english text into piglatin
 	 * @return object
@@ -51,7 +51,7 @@ class Translator extends Base
 			'translatedText'=> '',
 			'message'		=> '',
 		);
-		
+
 		$originalText = $this->GetParam('original-text', ".*");
 		$originalText = trim(strip_tags($originalText));
 
@@ -63,7 +63,7 @@ class Translator extends Base
 			$result->message = 'Please type some words.';
 			return $result;
 		}
-		
+
 		$translatedText = $this->_translateToPigLatin($originalText);
 
 		$sessionTexts = $this->getSessionTexts();
@@ -75,10 +75,10 @@ class Translator extends Base
 		$result->translatedText = $translatedText;
 		return $result;
 	}
-	
+
 	/**
 	 * Translate validated english text into piglatin
-	 * @param string $str 
+	 * @param string $str
 	 * @return string
 	 */
 	private function _translateToPigLatin ($str = "") {
@@ -93,22 +93,22 @@ class Translator extends Base
 			if ($this->_translatorCheckStartWithVowel($word)) {
 				//x(1);
 				$result .= preg_replace(
-					$this->_translatorRules->vowel, 
-					"$1$2'" . self::$_translatorCfg->vowelEndings[1], 
+					$this->_translatorRules->vowel,
+					"$1$2'" . self::$_translatorCfg->vowelEndings[1],
 					$word
 				);
 			} elseif ($this->_translatorCheckStartWithConsonant($word)) {
 				//x(2);
 				$result .= preg_replace(
-					$this->_translatorRules->consonant, 
-					"$2-$1ay", 
+					$this->_translatorRules->consonant,
+					"$2-$1ay",
 					$word
 				);
 			} elseif ($this->_translatorCheckStartWithOther($word)) {
 				//x(3);
 				$result .= preg_replace(
-					$this->_translatorRules->other, 
-					"$2-$1ay", 
+					$this->_translatorRules->other,
+					"$2-$1ay",
 					$word
 				);
 			}
@@ -117,7 +117,7 @@ class Translator extends Base
 		}
         return $result;
 	}
-	
+
 	/**
      * checks if word starts with a consonant
      * it is necessary to know if the string starts with a character not in our configured list [$2-$1ay]

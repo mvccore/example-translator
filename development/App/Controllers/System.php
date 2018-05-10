@@ -6,7 +6,8 @@ class System extends Base
 {
 	public function JsErrorsLogAction () {
 		$this->DisableView();
-		if (\MvcCore\Config::IsProduction()) return;
+		$configClass = $this->application->GetConfigClass();
+		if ($configClass::IsProduction()) return;
 		$keys = array(
 			'message'=>1,
 			'uri'		=> 1,
@@ -19,9 +20,8 @@ class System extends Base
 		);
 		$data = array();
 		foreach ($keys as $key => $hex) {
-			$param = $this->GetParam($key);
+			$param = $this->GetParam($key, 'a-zA-Z0-9/\&\(\)\[\]\.\'\"%\#\$');
 			if ($hex) $param = self::_hexToStr($param);
-			$param = preg_replace("#[^a-zA-Z0-9/\&\(\)\[\]\.\'\"%\#\$]#", "", $param);
 			$data[$key] = $param;
 		}
 		$msg = json_encode($data);
