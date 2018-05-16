@@ -18,9 +18,11 @@ class Base extends \MvcCore\Controller
 
 			$static = self::$staticPath;
 			$this->view->Css('fixedHead')
-				->AppendRendered($static . '/css/all.css')
+				->Append($static . '/css/resets.css')
+				->Append($static . '/css/old-browsers-warning.css')
 				->AppendRendered($static . '/css/fonts.css')
-				->AppendRendered($static . '/css/button.css');
+				->AppendRendered($static . '/css/all.css')
+				->AppendRendered($static . '/css/forms-and-controls.css');
 			$this->view->Js('fixedHead')
 				->Append($static . '/js/libs/class.min.js')
 				->Append($static . '/js/libs/ajax.min.js')

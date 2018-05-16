@@ -33,7 +33,7 @@ class Translator extends Base
 
 	public function HtmlSubmitAction () {
 		$this->_validateInputAndTryToTranslate();
-		self::Redirect($this->request->GetBasePath() . '/');
+		self::Redirect($this->request->GetBaseUrl() . '/');
 	}
 
 	public function JsSubmitAction () {

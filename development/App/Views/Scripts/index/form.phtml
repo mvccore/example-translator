@@ -1,24 +1,30 @@
 <?php /** @var $this \MvcCore\View */ ?>
-<form id="pig-latin-translator" action="<?php
+<form id="pig-latin-translator" class="theme pig-latin-translator" action="<?php
 	echo $this->Url('Translator:HtmlSubmit');
 ?>" data-js="<?php
 	echo $this->JsonAttr(array(
 		'jsSubmit'	=> $this->Url('Translator:JsSubmit')
 	));
-?>" method="post" enctype="application/x-www-form-urlencoded">
+ ?>" method="post" enctype="application/x-www-form-urlencoded">
 
-	<fieldset class="plt-original-text">
-		<label for="plt-original-text">Type english text:</label>
-		<textarea rows="4" cols="100" name="original-text" id="plt-original-text"><?php echo $this->OriginalText; ?></textarea>
-	</fieldset>
-	
-	<fieldset class="plt-translated-text">
-		<label for="plt-translated-text">Pig Latin result:</label>
-		<textarea rows="4" cols="100" id="plt-translated-text"><?php echo $this->TranslatedText; ?></textarea>
-	</fieldset>
+	<table class="fieldsets"><tr>
 
-	<div class="clear"></div>
+		<td class="plt-original-text">
+			<label for="plt-original-text">Type english text:</label>
+			<textarea rows="4" cols="100" name="original-text" id="plt-original-text"><?php
+				echo $this->OriginalText;
+			?></textarea>
+		</td>
 
-    <button class="button button-green" type="submit"><span><b>Translate</b></span></button>
+		<td class="plt-translated-text">
+			<label for="plt-translated-text">Pig Latin result:</label>
+			<textarea rows="4" cols="100" id="plt-translated-text"><?php
+				echo $this->TranslatedText;
+			?></textarea>
+		</td>
+
+	</tr></table>
+
+	<button class="button button-green" type="submit"><span><b>Translate</b></span></button>
 	
 </form>
