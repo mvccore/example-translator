@@ -9,7 +9,7 @@ class Base extends \MvcCore\Controller
 		parent::PreDispatch();
 		if (!$this->ajax) {
 
-			\MvcCore\Ext\View\Helpers\Assets::SetGlobalOptions(array(
+			\MvcCore\Ext\Views\Helpers\Assets::SetGlobalOptions(array(
 				'cssMinify'		=> 1,
 				'cssJoin'		=> 1,
 				'jsMinify'		=> 1,
