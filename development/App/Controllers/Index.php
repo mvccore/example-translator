@@ -6,7 +6,7 @@ class Index extends Base
 {
 	public function IndexAction () {
 		$sessionTexts = $this->getSessionTexts();
-		if ($this->IsViewEnabled()) {
+		if ($this->GetViewEnabled()) {
 			$this->view->OriginalText = $sessionTexts->original;
 			$this->view->TranslatedText = $sessionTexts->translated;
 		}

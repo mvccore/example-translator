@@ -2,9 +2,9 @@
 <form id="pig-latin-translator" class="theme pig-latin-translator" action="<?php
 	echo $this->Url('Translator:HtmlSubmit');
 ?>" data-js="<?php
-	echo $this->JsonAttr(array(
+	echo $this->JsonAttr([
 		'jsSubmit'	=> $this->Url('Translator:JsSubmit')
-	));
+	]);
  ?>" method="post" enctype="application/x-www-form-urlencoded">
 
 	<table class="fieldsets"><tr>

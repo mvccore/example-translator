@@ -8,7 +8,7 @@ class System extends Base
 		$this->DisableView();
 		$configClass = $this->application->GetConfigClass();
 		if ($configClass::IsProduction()) return;
-		$keys = array(
+		$keys = [
 			'message'=>1,
 			'uri'		=> 1,
 			'file'		=> 1,
@@ -17,8 +17,8 @@ class System extends Base
 			'callstack'	=> 1,
 			'browser'	=> 1,
 			'platform'	=> 0,
-		);
-		$data = array();
+		];
+		$data = [];
 		foreach ($keys as $key => $hex) {
 			$param = $this->GetParam($key, 'a-zA-Z0-9/\&\(\)\[\]\.\'\"%\#\$');
 			if ($hex) $param = self::_hexToStr($param);

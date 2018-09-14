@@ -7,13 +7,13 @@ class Translator extends Base
 	const DEFAULT_ORIGINAL_TEXT = "";
 	const DEFAULT_TRANSLATED_TEXT = "";
 
-	private static $_translatorCfg = array(
+	private static $_translatorCfg = [
 		'vowels'		=> 'aeiouy',						// store the vowels, or other characters that we want to break up words with
-		'vowelEndings'	=> array('ay','yay','way','hey'),	// we need to store the various different endings for different dialects
+		'vowelEndings'	=> ['ay','yay','way','hey'],	// we need to store the various different endings for different dialects
 		'additional'	=> 'qu',							// store a set of other rules that we can use to split words
-	);
+	];
 
-	private $_translatorRules = array();
+	private $_translatorRules = [];
 	private $_consonant = '';
     private $_vowel = '';
     private $_other = '';
@@ -24,11 +24,11 @@ class Translator extends Base
 		self::$_translatorCfg = (object) self::$_translatorCfg;
 
 		// store a set of rules, as we create them from the config
-		$this->_translatorRules = (object) array(
+		$this->_translatorRules = (object) [
 			'consonant'	=> '/^([^' . self::$_translatorCfg->vowels . self::$_translatorCfg->additional . ']*)(.*)/',
 			'vowel'		=> '/^([' . self::$_translatorCfg->vowels . ']+)(.*)/',
 			'other'		=> '/^(' . self::$_translatorCfg->additional . '+)(.*)/',
-		);
+		];
 	}
 
 	public function HtmlSubmitAction () {
@@ -45,12 +45,12 @@ class Translator extends Base
 	 * @return object
 	 */
 	private function _validateInputAndTryToTranslate () {
-		$result = (object) array(
+		$result = (object) [
 			'success'		=> FALSE,
 			'originalText'	=> '',
 			'translatedText'=> '',
 			'message'		=> '',
-		);
+		];
 
 		$originalText = $this->GetParam('original-text', ".*");
 		$originalText = trim(strip_tags($originalText));
