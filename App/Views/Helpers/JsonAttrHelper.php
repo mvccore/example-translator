@@ -2,7 +2,7 @@
 
 namespace App\Views\Helpers;
 
-class JsonAttr
+class JsonAttrHelper
 {
 	/**
 	 * Convert any php value to json format, which is available to use in html attribute

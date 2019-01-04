@@ -465,17 +465,18 @@ form.theme::after{
 	width:0;
 	height:0;
 	z-index:-1;
-	content:url('<?php echo $this->AssetUrl('/static/img/theme/buttons-form.active.min.svg'); ?>') 
-			url('<?php echo $this->AssetUrl('/static/img/theme/text-inputs.normal.active.min.svg'); ?>') 
-			url('<?php echo $this->AssetUrl('/static/img/theme/text-inputs.normal.active.required.min.svg'); ?>') 
-			url('<?php echo $this->AssetUrl('/static/img/theme/text-inputs.error.passive.min.svg'); ?>') 
-			url('<?php echo $this->AssetUrl('/static/img/theme/text-inputs.error.passive.required.min.svg'); ?>') 
-			url('<?php echo $this->AssetUrl('/static/img/theme/text-inputs.error.active.min.svg'); ?>') 
-			url('<?php echo $this->AssetUrl('/static/img/theme/text-inputs.error.active.required.min.svg'); ?>') /*
-			url('<?php echo $this->AssetUrl('/static/img/theme/select.normal.active.min.svg'); ?>') 
-			url('<?php echo $this->AssetUrl('/static/img/theme/select.normal.active.required.min.svg'); ?>') 
-			url('<?php echo $this->AssetUrl('/static/img/theme/select.error.passive.min.svg'); ?>') 
-			url('<?php echo $this->AssetUrl('/static/img/theme/select.error.passive.required.min.svg'); ?>') 
-			url('<?php echo $this->AssetUrl('/static/img/theme/select.error.active.min.svg'); ?>') 
-			url('<?php echo $this->AssetUrl('/static/img/theme/select.error.active.required.min.svg'); ?>') */;
+	content:' ';
+	background: url('<?php echo $this->AssetUrl('/static/img/theme/buttons-form.active.min.svg'); ?>') 
+				url('<?php echo $this->AssetUrl('/static/img/theme/text-inputs.normal.active.min.svg'); ?>') 
+				url('<?php echo $this->AssetUrl('/static/img/theme/text-inputs.normal.active.required.min.svg'); ?>') 
+				url('<?php echo $this->AssetUrl('/static/img/theme/text-inputs.error.passive.min.svg'); ?>') 
+				url('<?php echo $this->AssetUrl('/static/img/theme/text-inputs.error.passive.required.min.svg'); ?>') 
+				url('<?php echo $this->AssetUrl('/static/img/theme/text-inputs.error.active.min.svg'); ?>') 
+				url('<?php echo $this->AssetUrl('/static/img/theme/text-inputs.error.active.required.min.svg'); ?>') /*
+				url('<?php echo $this->AssetUrl('/static/img/theme/select.normal.active.min.svg'); ?>') 
+				url('<?php echo $this->AssetUrl('/static/img/theme/select.normal.active.required.min.svg'); ?>') 
+				url('<?php echo $this->AssetUrl('/static/img/theme/select.error.passive.min.svg'); ?>') 
+				url('<?php echo $this->AssetUrl('/static/img/theme/select.error.passive.required.min.svg'); ?>') 
+				url('<?php echo $this->AssetUrl('/static/img/theme/select.error.active.min.svg'); ?>') 
+				url('<?php echo $this->AssetUrl('/static/img/theme/select.error.active.required.min.svg'); ?>') */;
 }

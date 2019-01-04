@@ -1,19 +1,15 @@
 {
 	"name": "mvccore/example-translator",
-	"type": "application",
+	"type": "project",
 	"description": "MvcCore Example - Pig Latin Translator - translate English to Pig Latin - https://en.wikipedia.org/wiki/Pig_Latin.",
 	"keywords": [
 		"mvccore",
 		"framework",
-		"mvc",
-		"simple mvc",
-		"super fast mvc",
-		"easy mvc",
-		"single file application",
+		"pig-latin",
 		"pig latin",
 		"piglatin",
 		"translator",
-		"pig latin translator"
+		"example"
 	],
 	"license": ["BSD-3-Clause"],
 	"authors": [{
@@ -21,9 +17,10 @@
 		"homepage": "https://github.com/tomFlidr"
 	}],
 	"require": {
-		"php": ">=5.3.0",
-		"mrclay/minify": "2.3.*",
-		"mvccore/packager": "2.*"
+		"php": ">=5.4.0",
+		"mvccore/mvccore": "^5.0",
+		"mvccore/ext-view-helper-assets": "^5.0",
+		"mvccore/ext-debug-tracy-routing": "^5.0"
 	},
 	"minimum-stability": "stable"
 }
