@@ -15,4 +15,3 @@ run this example first (to see how it works) and then follow steps here on [`mvc
 # load example into './my-translator' (directory is created if doesn't exist)
 composer create-project mvccore/example-translator my-translator
 ```
-```
