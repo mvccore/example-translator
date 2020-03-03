@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-class Translator extends Base
-{
+class Translator extends Base {
+
 	const DEFAULT_ORIGINAL_TEXT = "";
 	const DEFAULT_TRANSLATED_TEXT = "";
 
