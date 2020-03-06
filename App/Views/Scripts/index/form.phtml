@@ -1,26 +1,31 @@
 <?php /** @var $this \MvcCore\View */ ?>
-<form id="pig-latin-translator" class="theme pig-latin-translator" action="<?php
-	echo $this->Url('Translator:HtmlSubmit');
-?>" data-js="<?php
-	echo $this->JsonAttr([
+<form 
+	id="pig-latin-translator" 
+	class="theme pig-latin-translator" 
+	action="<?=$url('Translator:HtmlSubmit')?>" 
+	data-js="<?php echo $this->JsonAttr([
 		'jsSubmit'	=> $this->Url('Translator:JsSubmit')
-	]);
- ?>" method="post" enctype="application/x-www-form-urlencoded">
+	]); ?>" 
+	method="post" 
+	enctype="application/x-www-form-urlencoded">
 
 	<table class="fieldsets"><tr>
 
 		<td class="plt-original-text">
 			<label for="plt-original-text">Type english text:</label>
-			<textarea rows="4" cols="100" name="original-text" id="plt-original-text"><?php
-				echo $originalText;
-			?></textarea>
+			<textarea 
+				rows="4" 
+				cols="100" 
+				name="original-text" 
+				id="plt-original-text"><?=$originalText?></textarea>
 		</td>
 
 		<td class="plt-translated-text">
 			<label for="plt-translated-text">Pig Latin result:</label>
-			<textarea rows="4" cols="100" id="plt-translated-text"><?php
-				echo $translatedText;
-			?></textarea>
+			<textarea 
+				rows="4" 
+				cols="100" 
+				id="plt-translated-text"><?=$translatedText?></textarea>
 		</td>
 
 	</tr></table>
