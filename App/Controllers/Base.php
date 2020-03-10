@@ -2,9 +2,10 @@
 
 namespace App\Controllers;
 
-class Base extends \MvcCore\Controller
-{
+class Base extends \MvcCore\Controller {
+
 	private static $_session = NULL;
+
 	public function PreDispatch () {
 		parent::PreDispatch();
 		if (!$this->ajax) {
@@ -30,11 +31,10 @@ class Base extends \MvcCore\Controller
 				->Append($static . '/js/libs/Helpers.js');
 			$this->view->Js('varFoot')
 				->Append($static . '/js/Front.js');
-
 		}
 	}
 	protected function & getSessionTexts () {
-		if (is_null(self::$_session)) {
+		if (self::$_session === NULL) {
 			self::$_session = \MvcCore\Session::GetNamespace('texts');
 			self::$_session->SetExpirationSeconds(3600); // hour
 		}
