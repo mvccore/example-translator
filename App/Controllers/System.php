@@ -6,8 +6,7 @@ class System extends Base {
 
 	public function JsErrorsLogAction () {
 		$this->SetViewEnabled(FALSE);
-		$configClass = $this->application->GetConfigClass();
-		if ($configClass::IsProduction()) return;
+		if ($this->environment->IsProduction()) return;
 		$keys = [
 			'message'	=> 1,
 			'uri'		=> 1,
