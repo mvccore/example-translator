@@ -1,7 +1,7 @@
 # MvcCore - Example - Pig-Latin Translator
 
 [![Latest Stable Version](https://img.shields.io/badge/Stable-v5.0.0-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-translator/releases)
-[![License](https://img.shields.io/badge/Licence-BSD-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-translator/blob/master/LICENCE.md)
+[![License](https://img.shields.io/badge/License-BSD%203-brightgreen.svg?style=plastic)](https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md)
 [![Packager Build](https://img.shields.io/badge/Packager%20Build-passing-brightgreen.svg?style=plastic)](https://github.com/mvccore/packager)
 ![PHP Version](https://img.shields.io/badge/PHP->=5.4-brightgreen.svg?style=plastic)
 
@@ -12,6 +12,5 @@ run this example first (to see how it works) and then follow steps here on [`mvc
 
 ## Instalation
 ```shell
-# load example into './my-translator' (directory is created if doesn't exist)
-composer create-project mvccore/example-translator my-translator
+composer create-project mvccore/example-translator
 ```
