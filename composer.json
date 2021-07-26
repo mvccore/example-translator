@@ -18,7 +18,7 @@
 	}],
 	"require": {
 		"php": ">=5.4.0",
-		"mvccore/mvccore": "^5.0",
+		"mvccore/mvccore": "^5.1",
 		"mvccore/ext-view-helper-assets": "^5.0",
 		"mvccore/ext-debug-tracy-routing": "^5.0"
 	},
