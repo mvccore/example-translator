@@ -53,7 +53,7 @@ class Translator extends Base {
 		];
 
 		$originalText = $this->GetParam('original-text', ".*");
-		$originalText = trim(strip_tags($originalText));
+		$originalText = trim(strip_tags($originalText ?: ''));
 
 		if (empty($originalText)) {
 			$result->message = 'Please type any text to translate.';
