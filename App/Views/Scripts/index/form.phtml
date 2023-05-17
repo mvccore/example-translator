@@ -4,7 +4,7 @@
 	class="theme pig-latin-translator" 
 	action="<?=$url('Translator:HtmlSubmit')?>" 
 	data-js="<?php echo $this->JsonAttr([
-		'jsSubmit'	=> $this->Url('Translator:JsSubmit')
+		'jsSubmit'	=> $url('Translator:JsSubmit')
 	]); ?>" 
 	method="post" 
 	enctype="application/x-www-form-urlencoded">
@@ -17,7 +17,7 @@
 				rows="4" 
 				cols="100" 
 				name="original-text" 
-				id="plt-original-text"><?=$originalText?></textarea>
+				id="plt-original-text"><?=$escape($originalText)?></textarea>
 		</td>
 
 		<td class="plt-translated-text">
@@ -25,7 +25,7 @@
 			<textarea 
 				rows="4" 
 				cols="100" 
-				id="plt-translated-text"><?=$translatedText?></textarea>
+				id="plt-translated-text"><?=$escape($translatedText)?></textarea>
 		</td>
 
 	</tr></table>

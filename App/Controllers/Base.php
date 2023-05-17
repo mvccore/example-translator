@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class Base extends \MvcCore\Controller {
 
-	private static $_session = NULL;
+	private $_session = NULL;
 
 	public function PreDispatch () {
 		parent::PreDispatch();
@@ -34,10 +34,10 @@ class Base extends \MvcCore\Controller {
 		}
 	}
 	protected function & getSessionTexts () {
-		if (self::$_session === NULL) {
-			self::$_session = \MvcCore\Session::GetNamespace('texts');
-			self::$_session->SetExpirationSeconds(3600); // hour
+		if ($this->_session === NULL) {
+			$this->_session = $this->GetSessionNamespace('texts');
+			$this->_session->SetExpirationSeconds(3600); // hour
 		}
-		return self::$_session;
+		return $this->_session;
 	}
 }
